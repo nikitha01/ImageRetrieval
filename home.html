@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Stylish' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif; background-color:honeydew;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+h3 {
+    text-align:center;
+    font-family: 'Stylish';
+    font-size: 22px; 
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 0; 
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid lightseagreen;
+}
+
+.button1:hover {
+  background-color:lightseagreen;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<h2 style="font-family:'Stylish'; font-size: 30px; text-align: center; color:lightseagreen;"><u>Image Retrieval using Feature Extraction</u></h2>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="../static/image4.jpg" style="width:100%">
+  <br>
+  <h3>Human Brain has approximately 86 Billon Neurons that make it capable of what it does. A Computer has CNN, which similarly makes it capable</h3>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="../static/darwin.jpg" style="width:100%" height="350px">
+  <br>
+  <h3 style="text-align:center;">We have tried to explore a number of image categories through ML, CNN, and Image Processing!</h3>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="../static/image1.jpg" style="width:100%" height="350px">
+  <br>
+  <h3 style="text-align:center;">And, we have chosen a couple of these Image categories</h3>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="../static/faces1.jpg" style="width:100%" height="350px">
+    <br>
+    <h3 style="text-align:center;">Along with Human Faces for Age Detection</h3>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="../static/image5.jpg" style="width:100%" height="350px">
+    <br>
+    <h3 style="text-align:center;">And, collectively worked on...</h3>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="../static/Final.png" style="width:100%" height="350px">
+    <br>
+    <h3 style="text-align:center;">IMAGE RETRIEVAL</h3>
+</div>
+
+</div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span> 
+</div>
+<div>
+  <button class="button button1" type="button" onclick="location.href='im'">NEXT</button>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
